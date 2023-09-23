@@ -4,10 +4,36 @@ using std ::string;
 
 class Student
 {
-public:
+private:
     string Name;
     string Department;
     int Age;
+
+public:
+    void setName(string name) // set method
+    {
+        Name = name;
+    }
+    string getName() // get method
+    {
+        return Name;
+    }
+    void setDepartment(string department)
+    {
+        Department = department;
+    }
+    string getDepartment()
+    {
+        return Department;
+    }
+    void setAge(int age)
+    {
+        Age = age;
+    }
+    int getAge()
+    {
+        return Age;
+    }
 
     void introduceYourself()
     {
@@ -44,6 +70,15 @@ int main()
     Student student2 = Student("Sujan", "CSE", 23);
     student2.introduceYourself();
 
-    
+    Student student3 = Student("Tamanna", "EEE", 23);
+    student3.introduceYourself();
+    student3.setDepartment("CSE");
+    std::cout << "Student name is: " << student3.getName() << " student department is: " << student3.getDepartment() << " student age is:" << student3.getAge() << std::endl;
+
+
+
+    student1.setAge(24);
+    std::cout << student1.getName() << " is " << student1.getAge() << " years old " << std::endl;
+
     return 0;
 }
